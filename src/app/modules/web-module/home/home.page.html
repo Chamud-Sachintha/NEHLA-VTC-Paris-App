@@ -18,14 +18,75 @@
 </ion-header>
 
 <ion-content>
-  <swiper #swiper>
+  <swiper #swiper [config]="config">
     <ng-template swiperSlide>
-      <ion-img src="https://docs-demo.ionic.io/assets/madison.jpg" alt="The Wisconsin State Capitol building in Madison, WI at night"></ion-img>
+      <ion-img src="https://nehlavtcparis.com/images/bg3.jpg" alt="The Wisconsin State Capitol building in Madison, WI at night"></ion-img>
     </ng-template>
-    <ng-template swiperSlide>Slide 1</ng-template>
-    <ng-template swiperSlide>Slide 1</ng-template>
-    <ng-template swiperSlide>Slide 1</ng-template>
+    <ng-template swiperSlide>
+      <ion-img src="https://nehlavtcparis.com/images/bg3.jpg" alt="The Wisconsin State Capitol building in Madison, WI at night">
+        <img src="" style="height: 2px;">
+      </ion-img>
+    </ng-template>
+    <ng-template swiperSlide>
+      <ion-img src="https://nehlavtcparis.com/images/bg3.jpg" alt="The Wisconsin State Capitol building in Madison, WI at night"></ion-img>
+    </ng-template>
   </swiper>
+
+  <ion-grid style="margin-top: 10px;">
+    <ion-row>
+      <ion-col>
+        <a href="" class="link-reset">
+          <ion-img src="https://img.icons8.com/bubbles/100/null/car.png" style="width: 80px;"></ion-img>
+          <p class="ion-text-center">Vehicles</p>
+        </a>
+      </ion-col>
+      <ion-col>
+        <a href="" class="link-reset">
+          <ion-img src="https://img.icons8.com/bubbles/100/null/world-map.png" style="width: 80px;"></ion-img>
+          <p class="ion-text-center">Destinations</p>
+        </a>
+      </ion-col>
+      <ion-col>
+        <a href="" class="link-reset">
+          <ion-img src="https://img.icons8.com/bubbles/100/null/toca-life-world.png" style="width: 80px;"></ion-img>
+          <p class="ion-text-center">Packages</p>
+        </a>
+      </ion-col>
+      <ion-col>
+        <a href="" class="link-reset">
+          <ion-img src="https://img.icons8.com/bubbles/100/null/ringer-volume.png" style="width: 80px;"></ion-img>
+          <p class="ion-text-center">Contact Us</p>
+        </a>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <a href="" class="link-reset">
+          <ion-img src="https://img.icons8.com/bubbles/100/null/purchase-order.png" style="width: 80px;"></ion-img>
+          <p class="ion-text-center">Booking</p>
+        </a>
+      </ion-col>
+      <ion-col>
+        <a href="" class="link-reset">
+          <ion-img src="https://img.icons8.com/bubbles/100/null/comments.png" style="width: 80px;"></ion-img>
+          <p class="ion-text-center">Testimonials</p>
+        </a>
+      </ion-col>
+      <ion-col>
+        <a href="" class="link-reset">
+          <ion-img src="https://img.icons8.com/bubbles/100/null/toca-life-world.png" style="width: 80px;"></ion-img>
+          <p class="ion-text-center">Packages</p>
+        </a>
+      </ion-col>
+      <ion-col>
+        <a href="" class="link-reset">
+          <ion-img src="https://img.icons8.com/bubbles/100/null/ringer-volume.png" style="width: 80px;"></ion-img>
+          <p class="ion-text-center">Contact Us</p>
+        </a>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 
   <ion-card>
     <ion-card-header>
