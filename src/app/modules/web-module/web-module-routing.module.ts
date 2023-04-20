@@ -4,6 +4,7 @@ import { HomePage } from './home/home.page';
 import { LoginPage } from '../auth-module/login/login.page';
 import { VehicleDetailsPage } from './vehicle-details/vehicle-details.page';
 import { DestinationDetailsPage } from './destination-details/destination-details.page';
+import { PackageDetailsPage } from './package-details/package-details.page';
 
 const routes: Routes = [
   {
@@ -28,6 +29,10 @@ const routes: Routes = [
   {
     path: 'destinations',
     component: DestinationDetailsPage
+  },
+  {
+    path: 'packages',
+    component: PackageDetailsPage
   }
 ];
 
