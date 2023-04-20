@@ -28,4 +28,12 @@ export const routes: Routes = [
     path: 'login',
     loadComponent: () => import('./modules/auth-module/login/login.page').then( m => m.LoginPage)
   },
+  {
+    path: 'vehicle-details',
+    loadComponent: () => import('./modules/web-module/vehicle-details/vehicle-details.page').then( m => m.VehicleDetailsPage)
+  },
+  {
+    path: 'destination-details',
+    loadComponent: () => import('./modules/web-module/destination-details/destination-details.page').then( m => m.DestinationDetailsPage)
+  },
 ];

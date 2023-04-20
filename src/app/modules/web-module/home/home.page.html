@@ -32,81 +32,115 @@
     </ng-template>
   </swiper>
 
-  <ion-grid style="margin-top: 10px;">
-    <ion-row>
-      <ion-col>
-        <a href="" class="link-reset">
-          <ion-img src="https://img.icons8.com/bubbles/100/null/car.png" style="width: 80px;"></ion-img>
-          <p class="ion-text-center">Vehicles</p>
+  <div align="center">
+    <div class="row">
+      <div class="col-4">
+        <a href="/vehicles" class="link-reset">
+          <ion-img src="https://img.icons8.com/bubbles/100/null/car.png" style="max-width: 80px;"></ion-img>
+          <p>Vehicles</p>
         </a>
-      </ion-col>
-      <ion-col>
-        <a href="" class="link-reset">
-          <ion-img src="https://img.icons8.com/bubbles/100/null/world-map.png" style="width: 80px;"></ion-img>
-          <p class="ion-text-center">Destinations</p>
+      </div>
+      <div class="col-4">
+        <a href="/destinations" class="link-reset">
+          <ion-img src="https://img.icons8.com/bubbles/100/null/world-map.png" style="max-width: 80px;"></ion-img>
+          <p>Destinations</p>
         </a>
-      </ion-col>
-      <ion-col>
+      </div>
+      <div class="col-4">
         <a href="" class="link-reset">
-          <ion-img src="https://img.icons8.com/bubbles/100/null/toca-life-world.png" style="width: 80px;"></ion-img>
-          <p class="ion-text-center">Packages</p>
+          <ion-img src="https://img.icons8.com/bubbles/100/null/toca-life-world.png" style="max-width: 80px;"></ion-img>
+          <p>Packages</p>
         </a>
-      </ion-col>
-      <ion-col>
+      </div>
+    </div>
+  
+    <div class="row">
+      <div class="col-4">
         <a href="" class="link-reset">
-          <ion-img src="https://img.icons8.com/bubbles/100/null/ringer-volume.png" style="width: 80px;"></ion-img>
-          <p class="ion-text-center">Contact Us</p>
+          <ion-img src="https://img.icons8.com/bubbles/100/null/ringer-volume.png" style="max-width: 80px;"></ion-img>
+          <p>Contact Us</p>
         </a>
-      </ion-col>
-    </ion-row>
+      </div>
+      <div class="col-4">
+        <a href="" class="link-reset">
+          <ion-img src="https://img.icons8.com/bubbles/100/null/purchase-order.png" style="max-width: 80px;"></ion-img>
+          <p>Booking</p>
+        </a>
+      </div>
+      <div class="col-4">
+        <a href="" class="link-reset">
+          <ion-img src="https://img.icons8.com/bubbles/100/null/comments.png" style="max-width: 80px;"></ion-img>
+          <p>Testimonials</p>
+        </a>
+      </div>
+    </div>
+  </div>
 
+  <ion-grid>
     <ion-row>
       <ion-col>
-        <a href="" class="link-reset">
-          <ion-img src="https://img.icons8.com/bubbles/100/null/purchase-order.png" style="width: 80px;"></ion-img>
-          <p class="ion-text-center">Booking</p>
-        </a>
-      </ion-col>
-      <ion-col>
-        <a href="" class="link-reset">
-          <ion-img src="https://img.icons8.com/bubbles/100/null/comments.png" style="width: 80px;"></ion-img>
-          <p class="ion-text-center">Testimonials</p>
-        </a>
-      </ion-col>
-      <ion-col>
-        <a href="" class="link-reset">
-          <ion-img src="https://img.icons8.com/bubbles/100/null/toca-life-world.png" style="width: 80px;"></ion-img>
-          <p class="ion-text-center">Packages</p>
-        </a>
-      </ion-col>
-      <ion-col>
-        <a href="" class="link-reset">
-          <ion-img src="https://img.icons8.com/bubbles/100/null/ringer-volume.png" style="width: 80px;"></ion-img>
-          <p class="ion-text-center">Contact Us</p>
-        </a>
+        <div class="section-subtitle">Our Services</div>
+        <div class="section-title">Transport Facilities</div>
       </ion-col>
     </ion-row>
   </ion-grid>
 
-  <ion-card>
-    <ion-card-header>
-      <ion-card-title>Card Title</ion-card-title>
-      <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
-    </ion-card-header>
-  
-    <ion-card-content>
-      Here's a small text description for the card content. Nothing more, nothing less.
-    </ion-card-content>
-  </ion-card>
+  <swiper #swiper [config]="config">
+    <ng-template swiperSlide>
+      <ion-card>
+        <ion-card-header>
+          <ion-img src="https://img.icons8.com/bubbles/100/null/cocktail.png" style="width: 80px;"></ion-img>
+          <ion-card-title>Refreshments, drinks</ion-card-title>
+          <!-- <ion-card-subtitle>Card Subtitle</ion-card-subtitle> -->
+        </ion-card-header>
+      
+        <ion-card-content>
+          Relax on board our vehicles equipped with drinks.
+        </ion-card-content>
+      </ion-card>
+    </ng-template>
+    <ng-template swiperSlide>
+      <ion-card>
+        <ion-card-header>
+          <ion-img src="https://img.icons8.com/bubbles/100/null/cocktail.png" style="width: 80px;"></ion-img>
+          <ion-card-title>Baby seat on Request</ion-card-title>
+          <!-- <ion-card-subtitle>Card Subtitle</ion-card-subtitle> -->
+        </ion-card-header>
+      
+        <ion-card-content>
+          Are you traveling with a baby? Tell us when you book and we will equip the vehicle with a baby seat to guarantee the safety of your baby.
+        </ion-card-content>
+      </ion-card>
+    </ng-template>
+    <ng-template swiperSlide>
+      <ion-card>
+        <ion-card-header>
+          <ion-img src="https://img.icons8.com/bubbles/100/null/cocktail.png" style="width: 80px;"></ion-img>
+          <ion-card-title>Charger</ion-card-title>
+          <!-- <ion-card-subtitle>Card Subtitle</ion-card-subtitle> -->
+        </ion-card-header>
+      
+        <ion-card-content>
+          Because our smartphones are essential to us, our vehicles are all equipped with cables to charge your smartphones.
+        </ion-card-content>
+      </ion-card>
+    </ng-template>
+  </swiper>
 
-  <ion-card>
-    <ion-card-header>
-      <ion-card-title>Card Title</ion-card-title>
-      <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
-    </ion-card-header>
-  
-    <ion-card-content>
-      Here's a small text description for the card content. Nothing more, nothing less.
-    </ion-card-content>
-  </ion-card>
+  <ion-grid style="margin-top: 10px;">
+    <ion-row>
+      <ion-col>
+        <div class="section-subtitle">THE NEHLA LUXURY TRANSPORT</div>
+        <div class="section-title">Enjoy a Luxury Experience</div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <p style="text-align: justify;">
+          NEHLA VTC Paris also accompanies tourists to offer them a quality trip to the capital of love and fashion. From your arrival at the airport to your return, we will take you to the four corners of the capital to provide you with an unforgettable experience in complete safety. All our drivers speak English and French.
+        </p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
 </ion-content>

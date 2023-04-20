@@ -13,12 +13,14 @@ import { SwiperComponent, SwiperModule } from 'swiper/angular';
 })
 export class HomePage implements OnInit {
 
+  img1 = "https://img.icons8.com/bubbles/100/null/car.png";
+
   @ViewChild('swiper') swiper!: SwiperComponent;
   animationInProgress = false;
 
   config = {
     slidesPerView: 1,
-    spaceBetween: 10,
+    spaceBetween: 0,
     pagination: true,
     loop: true,
   }
