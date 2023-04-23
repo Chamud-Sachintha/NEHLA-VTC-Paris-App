@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  app_uri: 'https://api.nehlavtcparis.com/api/'
 };
