@@ -31,7 +31,8 @@
       <ion-label>
         <div class="row">
           <div class="col-2">
-            <ion-img src="https://img.icons8.com/bubbles/100/null/ringer-volume.png" style="max-width: 50px; min-width: 50px;"></ion-img>
+            <ion-img src="https://img.icons8.com/bubbles/100/null/ringer-volume.png"
+              style="max-width: 50px; min-width: 50px;"></ion-img>
           </div>
           <div class="col-9 d-flex align-items-center">
             <h1>Available Destinations</h1>
@@ -46,4 +47,5 @@
       <ion-label>{{ i.place_name }}</ion-label>
     </ion-item>
   </ion-list>
+  <ion-toast [isOpen]="isToastOpen" message="There is An Error Occur Please Try Again." [duration]="5000"></ion-toast>
 </ion-content>

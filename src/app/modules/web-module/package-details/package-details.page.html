@@ -1,13 +1,72 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>package-details</ion-title>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <div class="ion-text-start">
+            <ion-button shape="round" color="success" size="small" href="/auth">SignIn</ion-button>
+          </div>
+        </ion-col>
+        <ion-col>
+          <div class="ion-text-end">
+            <ion-button shape="round" size="small">SignUp</ion-button>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">package-details</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-card>
+    <img alt="Silhouette of mountains" src="https://nehlavtcparis.com/images/1_5.jpg" />
+    <ion-card-header>
+      <ion-card-title>The Normandy Tour</ion-card-title>
+      <ion-card-subtitle>DISCOVER</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content>
+      Normandy has several places and traditions classified or listed as World Heritage by UNESCO, but also villages
+      classified among the "Most beautiful villages in France" and spas. Beyond these remarkable sites, and many
+      beautiful detours, each town and village in Normandy is to be discovered!
+      <div>
+        <ion-button expand="full">LEARN MORE</ion-button>
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <img alt="Silhouette of mountains" src="https://nehlavtcparis.com/images/3_2.jpg" />
+    <ion-card-header>
+      <ion-card-title>The Euroupe Tour</ion-card-title>
+      <ion-card-subtitle>EXPERIENCES</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content>
+      Are you planning to embark on one of the most exotic adventures through a tour of Europe? Whether it's a
+      thoughtful project or a sudden desire, do you want to go on an adventure on European roads?.
+      <div>
+        <ion-button expand="full">LEARN MORE</ion-button>
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <img alt="Silhouette of mountains" src="https://nehlavtcparis.com/images/2_3.jpg" />
+    <ion-card-header>
+      <ion-card-title>Paris City Tour</ion-card-title>
+      <ion-card-subtitle>MODERN</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content>
+      Experience a beautiful tour of Paris. A tour of Paris by van or car is the ideal tour for a first visit to
+      Paris.You will live an extraordinary moment during a city tour by car. Panoramic views will allow you to discover
+      the essential Parisian sites, such as the Opéra Garnier, the Eiffel Tower, or the Champs Elysées. Throughout this
+      visit...
+
+      <div>
+        <ion-button expand="full">LEARN MORE</ion-button>
+      </div>
+    </ion-card-content>
+  </ion-card>
 </ion-content>

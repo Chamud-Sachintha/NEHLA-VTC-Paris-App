@@ -15,6 +15,7 @@ import { Destination } from 'src/app/models/destination';
 export class DestinationDetailsPage implements OnInit {
 
   timer: any = 0;
+  isToastOpen = false;
   isLoading!: boolean;
   allDestinationList: Destination[] = [];
 
@@ -41,7 +42,7 @@ export class DestinationDetailsPage implements OnInit {
       });
 
     }, (err) => {
-
+      this.isToastOpen = true;
     })
 
     await loading.onDidDismiss();
