@@ -6,7 +6,7 @@ import { WebModuleRoutingModule } from './web-module-routing.module';
   declarations: [],
   imports: [
     CommonModule,
-    WebModuleRoutingModule,
+    WebModuleRoutingModule
   ]
 })
 export class WebModuleModule { }
