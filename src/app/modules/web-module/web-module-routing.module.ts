@@ -7,6 +7,8 @@ import { DestinationDetailsPage } from './destination-details/destination-detail
 import { PackageDetailsPage } from './package-details/package-details.page';
 import { ContactUsPage } from './contact-us/contact-us.page';
 import { BookingPage } from './booking/booking.page';
+import { JourneyFormPage } from './journey-form/journey-form.page';
+import { QuotationFormPage } from './quotation-form/quotation-form.page';
 
 const routes: Routes = [
   {
@@ -42,7 +44,18 @@ const routes: Routes = [
   },
   {
     path: 'booking',
-    component: BookingPage
+    component: BookingPage,
+    children: [
+      {
+        path: '',
+        component: JourneyFormPage
+      },
+      {
+        path: 'quotation-form',
+        component: QuotationFormPage,
+        pathMatch: 'full'
+      }
+    ]
   }
 ];
 
