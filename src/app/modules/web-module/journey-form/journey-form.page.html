@@ -1,9 +1,9 @@
 <div class="container">
-  <form action="" class="form-group" (ngSubmit)="onSubmitFirstForm()">
-    <div class="row">
+  <form [formGroup]="this.journeyForm" action="" class="form-group" (ngSubmit)="onSubmitFirstForm()">
+    <div class="row"> 
       <div class="col-12">
         <label for="from">From</label>
-        <input type="text" class="form-control" placeholder="Eg. Paris">
+        <input type="text" class="form-control" placeholder="Eg. Paris" formControlName="from">
       </div>
     </div>
     <div class="row mt-3 text-center">
@@ -14,7 +14,7 @@
     <div class="row mt-3">
       <div class="col-12">
         <label for="from">To</label>
-        <input type="text" class="form-control" placeholder="Eg. Paris">
+        <input type="text" class="form-control" placeholder="Eg. Paris" formControlName="to">
       </div>
     </div>
     <div class="row mt-2">
@@ -22,7 +22,7 @@
         <h3>Options</h3>
       </div>
       <div class="col-12">
-        <ion-radio-group value="trip_type">
+        <ion-radio-group formControlName="tripType">
           <ion-radio value="one_way">One Way</ion-radio>
           <ion-radio value="return" class="ms-5">Return</ion-radio>
         </ion-radio-group>
@@ -31,7 +31,7 @@
     <div class="row mt-3">
       <div class="col-12">
         <label for="">Select Passengers</label>
-        <select class="form-select" aria-label="Default select example">
+        <select class="form-select" aria-label="Default select example" formControlName="passengerCount">
           <option selected>Open this select menu</option>
           <option value="1">One</option>
           <option value="2">Two</option>
@@ -42,25 +42,25 @@
     <div class="row mt-3">
       <div class="col-12">
         <label for="from">Luggage</label>
-        <input type="text" class="form-control" placeholder="Eg. Paris">
+        <input type="text" class="form-control" placeholder="Eg. Paris" formControlName="luggageCount">
       </div>
     </div>
     <div class="row mt-3">
       <div class="col-12">
         <ion-label class="" position="floating">Date</ion-label>
-        <ion-datetime style="max-width: 100%;"></ion-datetime>
+        <ion-datetime style="max-width: 100%;" display-format="DD/MM/YYYY HH:mm" formControlName="date"></ion-datetime>
       </div>
     </div>
     <div class="row mt-3">
       <div class="col-12">
         <label for="from">Flight Number</label>
-        <input type="text" class="form-control" placeholder="Eg. Paris">
+        <input type="text" class="form-control" placeholder="Eg. Paris" formControlName="fliaghtNumber">
       </div>
     </div>
     <div class="row mt-3">
       <div class="col-12">
         <label for="from">Baby Seats</label>
-        <input type="text" class="form-control" placeholder="Eg. Paris">
+        <input type="text" class="form-control" placeholder="Eg. Paris" formControlName="babySeats">
       </div>
     </div>
     <div class="row mt-3 mb-3">

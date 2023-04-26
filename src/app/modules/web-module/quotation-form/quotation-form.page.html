@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="row mt-3">
+        <div class="col-12">
+            <google-map width="100%" [options]="this.options"></google-map>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <h3>Your Journey</h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6">
+            <p>From :</p>
+            <p>{{ this.journeyForm.from }}</p>
+        </div>
+        <div class="col-6">
+            <p>To :</p>
+            <p>{{ this.journeyForm.to }}</p>
+        </div>
+    </div>
+</div>
