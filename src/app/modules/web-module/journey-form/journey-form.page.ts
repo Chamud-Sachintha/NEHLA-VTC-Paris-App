@@ -40,7 +40,7 @@ export class JourneyFormPage implements OnInit {
   onSubmitFirstForm() {
     this.journeyFormValues.push(this.journeyForm.value);
     this.dataSharedService.setJouneyDataValues(this.journeyFormValues);
-    
+
     this.route.navigate(['/booking/quotation-form']);
   }
 
