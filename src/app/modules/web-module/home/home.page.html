@@ -1,38 +1,24 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-grid>
-      <ion-row>
-        <ion-col>
-          <div class="ion-text-start">
-            <ion-button shape="round" color="success" size="small" href="/auth">SignIn</ion-button>
-          </div>
-        </ion-col>
-        <ion-col>
-          <div class="ion-text-end">
-            <ion-button shape="round" size="small">SignUp</ion-button>
-          </div>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
-  <swiper #swiper [config]="config">
-    <ng-template swiperSlide>
-      <ion-img src="https://nehlavtcparis.com/images/bg3.jpg" alt="The Wisconsin State Capitol building in Madison, WI at night"></ion-img>
-    </ng-template>
-    <ng-template swiperSlide>
-      <ion-img src="https://nehlavtcparis.com/images/bg3.jpg" alt="The Wisconsin State Capitol building in Madison, WI at night">
-        <img src="" style="height: 2px;">
-      </ion-img>
-    </ng-template>
-    <ng-template swiperSlide>
-      <ion-img src="https://nehlavtcparis.com/images/bg3.jpg" alt="The Wisconsin State Capitol building in Madison, WI at night"></ion-img>
-    </ng-template>
-  </swiper>
+  <div class="rec">
+    <div class="row">
+      <div class="col-12">
+        <h1 class="welcome-heading">Welcome ,</h1>
+      </div>
+      <div class="col-12">
+        <h6 class="subtitle-heading">Let's Ride</h6>
+      </div>
+      <!-- <div class="col-12" style="margin-top: 265px !important; margin-left: 30px; width: 100% !important;">
+        <input type="text" class="form-control search" placeholder="Eg. Europe Tour">
+      </div> -->
+    </div>
+    <div class="row">
+      <div class="col-12" style="margin-top: 265px !important; margin-left: 30px; width: 100% !important;">
+        <input type="text" class="form-control search" placeholder="Eg. Europe Tour">
+      </div>
+    </div>
+  </div>
 
-  <div align="center">
+  <div class="row mt-3 ms-1" align="center">
     <div class="row">
       <div class="col-4">
         <a href="/vehicles" class="link-reset">
@@ -76,58 +62,140 @@
     </div>
   </div>
 
-  <ion-grid>
+  <div class="row ms-3">
+    <div class="col-12">
+      <h3 class="heading">Our Facilities</h3>
+    </div>
+  </div>
+  <!-- <div class="row ms-3">
+    <div class="col-3">
+      <div class="col-3 card" style="width: 10rem; height: 15rem; background-color: #DDE9F7;">
+        <ion-img src="../../../../assets/images/services/1.png"></ion-img>
+        <div class="row mt-2">
+          <div class="col-12">
+            <p class="text-center">Refreshments & Drinks</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-3">
+      <div class="col-3 card" style="width: 10rem; height: 15rem; background-color: #DDE9F7;">
+        <ion-img src="../../../../assets/images/services/1.png"></ion-img>
+        <div class="row mt-2">
+          <div class="col-12">
+            <p class="text-center">Refreshments & Drinks</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-3">
+      <div class="col-3 card" style="width: 10rem; height: 15rem; background-color: #DDE9F7;">
+        <ion-img src="../../../../assets/images/services/1.png"></ion-img>
+        <div class="row mt-2">
+          <div class="col-12">
+            <p class="text-center">Refreshments & Drinks</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+  <!-- <ion-grid>
     <ion-row>
       <ion-col>
         <div class="section-subtitle">Our Services</div>
         <div class="section-title">Transport Facilities</div>
       </ion-col>
     </ion-row>
-  </ion-grid>
+  </ion-grid> -->
 
-  <swiper #swiper [config]="config">
+  <swiper #swiper [config]="config" class="ms-3">
     <ng-template swiperSlide>
-      <ion-card>
+      <div class="card" style="width: 10rem; height: auto; background-color: #DDE9F7;">
+        <div class="row mt-2">
+          <div class="col-12">
+            <p class="text-center">Refreshments & Drinks</p>
+          </div>
+        </div>
+        <ion-img src="../../../../assets/images/services/1.png"></ion-img>
+        <div class="row mt-2">
+          <div class="col-12">
+            <p class="text-center">
+              Relax on board our vehicles equipped with drinks.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- <ion-card>
         <ion-card-header>
           <ion-img src="https://img.icons8.com/bubbles/100/null/cocktail.png" style="width: 80px;"></ion-img>
           <ion-card-title>Refreshments, drinks</ion-card-title>
-          <!-- <ion-card-subtitle>Card Subtitle</ion-card-subtitle> -->
         </ion-card-header>
       
         <ion-card-content>
           Relax on board our vehicles equipped with drinks.
         </ion-card-content>
-      </ion-card>
+      </ion-card> -->
     </ng-template>
     <ng-template swiperSlide>
-      <ion-card>
+      <div class="card" style="width: 10rem; height: auto; background-color: #F7F1DD;">
+        <div class="row mt-2">
+          <div class="col-12">
+            <p class="text-center">Refreshments & Drinks</p>
+          </div>
+        </div>
+        <ion-img src="../../../../assets/images/services/1.png"></ion-img>
+        <div class="row mt-2">
+          <div class="col-12">
+            <p class="text-center">
+              Relax on board our vehicles equipped with drinks.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- <ion-card>
         <ion-card-header>
           <ion-img src="https://img.icons8.com/bubbles/100/null/cocktail.png" style="width: 80px;"></ion-img>
           <ion-card-title>Baby seat on Request</ion-card-title>
-          <!-- <ion-card-subtitle>Card Subtitle</ion-card-subtitle> -->
         </ion-card-header>
       
         <ion-card-content>
           Are you traveling with a baby? Tell us when you book and we will equip the vehicle with a baby seat to guarantee the safety of your baby.
         </ion-card-content>
-      </ion-card>
+      </ion-card> -->
     </ng-template>
     <ng-template swiperSlide>
-      <ion-card>
+      <div class="card" style="width: 10rem; height: auto; background-color: #E9F7DD;">
+        <div class="row mt-2">
+          <div class="col-12">
+            <p class="text-center">Refreshments & Drinks</p>
+          </div>
+        </div>
+        <ion-img src="../../../../assets/images/services/1.png"></ion-img>
+        <div class="row mt-2">
+          <div class="col-12">
+            <p class="text-center">
+              Relax on board our vehicles equipped with drinks.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- <ion-card>
         <ion-card-header>
           <ion-img src="https://img.icons8.com/bubbles/100/null/cocktail.png" style="width: 80px;"></ion-img>
           <ion-card-title>Charger</ion-card-title>
-          <!-- <ion-card-subtitle>Card Subtitle</ion-card-subtitle> -->
         </ion-card-header>
       
         <ion-card-content>
           Because our smartphones are essential to us, our vehicles are all equipped with cables to charge your smartphones.
         </ion-card-content>
-      </ion-card>
+      </ion-card> -->
     </ng-template>
   </swiper>
 
-  <ion-grid style="margin-top: 10px;">
+  <!-- <ion-grid style="margin-top: 10px;">
     <ion-row>
       <ion-col>
         <div class="section-subtitle">THE NEHLA LUXURY TRANSPORT</div>
@@ -141,6 +209,15 @@
         </p>
       </ion-col>
     </ion-row>
-  </ion-grid>
-
+  </ion-grid> -->
+  <div class="row ms-3">
+    <div class="col-12">
+      <h3 class="heading">Enjoy a Luxury Experience</h3>
+    </div>
+    <div class="col-12">
+      <p style="text-align: justify; padding-right: 5px;">
+        NEHLA VTC Paris also accompanies tourists to offer them a quality trip to the capital of love and fashion. From your arrival at the airport to your return, we will take you to the four corners of the capital to provide you with an unforgettable experience in complete safety. All our drivers speak English and French.
+      </p>
+    </div>
+  </div>
 </ion-content>

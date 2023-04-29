@@ -19,7 +19,7 @@ export class HomePage implements OnInit {
   animationInProgress = false;
 
   config = {
-    slidesPerView: 1,
+    slidesPerView: 2,
     spaceBetween: 0,
     pagination: true,
     loop: true,
