@@ -1,6 +1,6 @@
 <div class="container">
   <form [formGroup]="this.journeyForm" action="" class="form-group" (ngSubmit)="onSubmitFirstForm()">
-    <div class="row mt-3"> 
+    <div class="row mt-3">
       <div class="col-12">
         <!-- <label for="from">From</label> -->
         <input type="text" class="form-control text-input" placeholder="Type From Location" formControlName="from">
@@ -42,7 +42,8 @@
     <div class="row mt-3">
       <div class="col-12">
         <!-- <label for="from">Luggage</label> -->
-        <input type="text" class="form-control text-input" placeholder="Type Luggage Count" formControlName="luggageCount">
+        <input type="text" class="form-control text-input" placeholder="Type Luggage Count"
+          formControlName="luggageCount">
       </div>
     </div>
     <div class="row mt-3">
@@ -50,7 +51,8 @@
         <ion-label class="" position="floating">Date</ion-label>
         <ion-card>
           <ion-card-content>
-            <ion-datetime style="max-width: 100%;" display-format="DD/MM/YYYY HH:mm" formControlName="date"></ion-datetime>
+            <ion-datetime style="max-width: 100%;" display-format="DD/MM/YYYY HH:mm"
+              formControlName="date"></ion-datetime>
           </ion-card-content>
         </ion-card>
       </div>
@@ -58,18 +60,20 @@
     <div class="row mt-3">
       <div class="col-12">
         <!-- <label for="from">Flight Number</label> -->
-        <input type="text" class="form-control text-input" placeholder="Type Flight Number" formControlName="fliaghtNumber">
+        <input type="text" class="form-control text-input" placeholder="Type Flight Number"
+          formControlName="fliaghtNumber">
       </div>
     </div>
     <div class="row mt-3">
       <div class="col-12">
         <!-- <label for="from">Baby Seats</label> -->
-        <input type="text" class="form-control text-input" placeholder="Type Baby Setas Count" formControlName="babySeats">
+        <input type="text" class="form-control text-input" placeholder="Type Baby Setas Count"
+          formControlName="babySeats">
       </div>
     </div>
     <div class="row mt-3 mb-3">
       <div class="col-12">
-        <ion-button type="submit" color="success" expand="full">Go to Next Page</ion-button>
+        <button class="submit-btn">Go to Next Page</button>
       </div>
     </div>
   </form>

@@ -49,4 +49,8 @@ export class QuotationFormPage implements OnInit {
       this.journeyForm.babySeatCount = data[0].babySeatCount;
     });
   }
+
+  goToPersonalFormPage() {
+    this.router.navigate(['/booking/personal-form']);
+  }
 }

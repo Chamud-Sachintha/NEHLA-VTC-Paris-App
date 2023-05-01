@@ -10,18 +10,17 @@
     line-height: 125%;
 }
 
-.welcome-heading {
-    width: 354px;
-    font-family: 'Poppins', sans-serif;
+.add-promo-btn {
     font-style: normal;
-    font-weight: 700;
-    // font-size: 30px;
-    line-height: 130%;
-    color: black;
-    /* or 39px */
-    letter-spacing: 1px;
-    left: 30px;
-    top: 121px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height */
+
+    color: #FFFFFF;
+    background: #2E2A72;
+    padding: 10px 20px 10px 20px;
+    width: 100%;
 }
 
 .submit-btn {

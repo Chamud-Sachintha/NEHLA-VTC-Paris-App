@@ -6,23 +6,31 @@
     </div>
     <div class="row">
         <div class="col-12">
-            <h3>Your Journey</h3>
+            <h3 class="title">Your Journey</h3>
         </div>
     </div>
     <div class="row">
         <div class="col-6">
-            <p>From :</p>
-            <p>{{ this.journeyForm.from }}</p>
+            <p class="sub-title">From :</p>
         </div>
         <div class="col-6">
-            <p>To :</p>
-            <p>{{ this.journeyForm.to }}</p>
+            <p class="sub-title">{{ this.journeyForm.from }}</p>
         </div>
     </div>
     <div class="row">
-        <div class="col-12">
-            <p>Price : (EUR)</p>
-            <p>30</p>
+        <div class="col-6">
+            <p class="sub-title">To :</p>
+        </div>
+        <div class="col-6">
+            <p class="sub-title">{{ this.journeyForm.to }}</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6">
+            <p class="sub-title">Price (EUR) :</p>
+        </div>
+        <div class="col-6">
+            <p class="sub-title">30</p>
         </div>
     </div>
     <div class="row">
@@ -85,10 +93,12 @@
                 </ion-card-content>
             </ion-card> -->
             <div class="card">
-                <img src="https://www.supercars.net/blog/wp-content/uploads/2020/11/2021-Mercedes-Benz-S-Class-015-2160-scaled.jpg" class="card-img-top" alt="...">
+                <img src="https://www.supercars.net/blog/wp-content/uploads/2020/11/2021-Mercedes-Benz-S-Class-015-2160-scaled.jpg"
+                    class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
                     <ion-button color="primary" expand="full">Select Vehicle</ion-button>
                 </div>
             </div>
@@ -107,13 +117,20 @@
                 </ion-card-content>
             </ion-card> -->
             <div class="card">
-                <img src="https://imgcdn.zigwheels.com.au/large/gallery/exterior/23/306/mercedes-benz-v-class-front-angle-low-view-216010.jpg" class="card-img-top" alt="...">
+                <img src="https://imgcdn.zigwheels.com.au/large/gallery/exterior/23/306/mercedes-benz-v-class-front-angle-low-view-216010.jpg"
+                    class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
                     <ion-button color="primary" expand="full">Select Vehicle</ion-button>
                 </div>
             </div>
+        </div>
+    </div>
+    <div class="row mt-3 mb-3">
+        <div class="col-12">
+            <button class="submit-btn" (click)="goToPersonalFormPage()">Go to Next Page</button>
         </div>
     </div>
 </div>

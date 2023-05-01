@@ -9,6 +9,7 @@ import { ContactUsPage } from './contact-us/contact-us.page';
 import { BookingPage } from './booking/booking.page';
 import { JourneyFormPage } from './journey-form/journey-form.page';
 import { QuotationFormPage } from './quotation-form/quotation-form.page';
+import { PersonalFormPage } from './personal-form/personal-form.page';
 
 const routes: Routes = [
   {
@@ -53,6 +54,11 @@ const routes: Routes = [
       {
         path: 'quotation-form',
         component: QuotationFormPage,
+        pathMatch: 'full'
+      },
+      {
+        path: 'personal-form',
+        component: PersonalFormPage,
         pathMatch: 'full'
       }
     ]
