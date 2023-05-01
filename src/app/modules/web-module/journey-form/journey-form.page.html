@@ -1,9 +1,9 @@
 <div class="container">
   <form [formGroup]="this.journeyForm" action="" class="form-group" (ngSubmit)="onSubmitFirstForm()">
-    <div class="row"> 
+    <div class="row mt-3"> 
       <div class="col-12">
-        <label for="from">From</label>
-        <input type="text" class="form-control" placeholder="Eg. Paris" formControlName="from">
+        <!-- <label for="from">From</label> -->
+        <input type="text" class="form-control text-input" placeholder="Type From Location" formControlName="from">
       </div>
     </div>
     <div class="row mt-3 text-center">
@@ -13,13 +13,13 @@
     </div>
     <div class="row mt-3">
       <div class="col-12">
-        <label for="from">To</label>
-        <input type="text" class="form-control" placeholder="Eg. Paris" formControlName="to">
+        <!-- <label for="from">To</label> -->
+        <input type="text" class="form-control text-input" placeholder="Type To Locatio" formControlName="to">
       </div>
     </div>
-    <div class="row mt-2">
+    <div class="row mt-2 mb-2">
       <div class="col-12">
-        <h3>Options</h3>
+        <h3 class="welcome-heading">Options</h3>
       </div>
       <div class="col-12">
         <ion-radio-group formControlName="tripType">
@@ -41,8 +41,8 @@
     </div>
     <div class="row mt-3">
       <div class="col-12">
-        <label for="from">Luggage</label>
-        <input type="text" class="form-control" placeholder="Eg. Paris" formControlName="luggageCount">
+        <!-- <label for="from">Luggage</label> -->
+        <input type="text" class="form-control text-input" placeholder="Type Luggage Count" formControlName="luggageCount">
       </div>
     </div>
     <div class="row mt-3">
@@ -57,14 +57,14 @@
     </div>
     <div class="row mt-3">
       <div class="col-12">
-        <label for="from">Flight Number</label>
-        <input type="text" class="form-control" placeholder="Eg. Paris" formControlName="fliaghtNumber">
+        <!-- <label for="from">Flight Number</label> -->
+        <input type="text" class="form-control text-input" placeholder="Type Flight Number" formControlName="fliaghtNumber">
       </div>
     </div>
     <div class="row mt-3">
       <div class="col-12">
-        <label for="from">Baby Seats</label>
-        <input type="text" class="form-control" placeholder="Eg. Paris" formControlName="babySeats">
+        <!-- <label for="from">Baby Seats</label> -->
+        <input type="text" class="form-control text-input" placeholder="Type Baby Setas Count" formControlName="babySeats">
       </div>
     </div>
     <div class="row mt-3 mb-3">

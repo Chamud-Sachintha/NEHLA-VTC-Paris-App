@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&family=Urbanist:wght@700&display=swap');
+
+.text-input {
+    height: 50px;
+    background-color: #F7F8F9;
+    font-family: 'Urbanist', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 125%;
+}
+
+.welcome-heading {
+    width: 354px;
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    // font-size: 30px;
+    line-height: 130%;
+    color: black;
+    /* or 39px */
+    letter-spacing: 1px;
+    left: 30px;
+    top: 121px;
+}
