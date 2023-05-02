@@ -10,6 +10,7 @@ import { BookingPage } from './booking/booking.page';
 import { JourneyFormPage } from './journey-form/journey-form.page';
 import { QuotationFormPage } from './quotation-form/quotation-form.page';
 import { PersonalFormPage } from './personal-form/personal-form.page';
+import { PaymentFormPage } from './payment-form/payment-form.page';
 
 const routes: Routes = [
   {
@@ -59,6 +60,11 @@ const routes: Routes = [
       {
         path: 'personal-form',
         component: PersonalFormPage,
+        pathMatch: 'full'
+      },
+      {
+        path: 'payment-form',
+        component: PaymentFormPage,
         pathMatch: 'full'
       }
     ]
