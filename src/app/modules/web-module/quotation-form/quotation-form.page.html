@@ -91,15 +91,17 @@
                     Here's a small text description for the card content. Nothing more, nothing less.
                     <ion-button color="primary" expand="full">Select</ion-button>
                 </ion-card-content>
-            </ion-card> -->
+            </ion-card> --> 
             <div class="card">
                 <img src="https://www.supercars.net/blog/wp-content/uploads/2020/11/2021-Mercedes-Benz-S-Class-015-2160-scaled.jpg"
                     class="card-img-top" alt="...">
                 <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
+                    <h5 class="card-title">Mercedes-Benz Class S Series</h5>
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
                         card's content.</p>
-                    <ion-button color="primary" expand="full">Select Vehicle</ion-button>
+
+                    <ion-button *ngIf="this.firstVehicle" color="secondary" expand="full" [disabled]="true">Selected</ion-button>
+                    <ion-button *ngIf="!this.firstVehicle" color="primary" expand="full" (click)="vehicleSelectAction('Mercedes-Benz-S', 1)">Select Vehicle</ion-button>
                 </div>
             </div>
         </div>
@@ -123,7 +125,9 @@
                     <h5 class="card-title">Card title</h5>
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
                         card's content.</p>
-                    <ion-button color="primary" expand="full">Select Vehicle</ion-button>
+                    
+                    <ion-button *ngIf="this.secondVehicle" color="secondary" expand="full" [disabled]="true">Selected</ion-button>
+                    <ion-button *ngIf="!this.secondVehicle" color="primary" expand="full" (click)="vehicleSelectAction('mercedes-benz-v', 2)">Select Vehicle</ion-button>
                 </div>
             </div>
         </div>
