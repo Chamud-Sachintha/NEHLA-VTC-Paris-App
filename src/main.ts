@@ -10,6 +10,7 @@ import { environment } from './environments/environment';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { GoogleMapsModule } from '@angular/google-maps';
+import { GooglePlaceModule } from 'ngx-google-places-autocomplete';
 
 if (environment.production) {
   enableProdMode();
@@ -19,7 +20,8 @@ bootstrapApplication(AppComponent, {
   providers: [
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     DatePipe,
-    importProvidersFrom(IonicModule.forRoot({}), HttpClientModule, RouterModule, FormsModule, ReactiveFormsModule, GoogleMapsModule),
+    importProvidersFrom(IonicModule.forRoot({}), HttpClientModule, RouterModule, FormsModule, ReactiveFormsModule, GoogleMapsModule
+                        , GooglePlaceModule),
     provideRouter(routes),
   ],
 });

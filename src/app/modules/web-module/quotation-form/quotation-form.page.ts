@@ -8,6 +8,9 @@ import { JouneyForm } from 'src/app/models/jouney-form';
 import { Observable, catchError, map, of } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { GoogleMapsModule } from '@angular/google-maps';
+import { GoogleMapConfig } from '../../../configs/gmap.config';
+import { DestinationServiceService } from 'src/app/services/destination-service.service';
+import { Destination } from 'src/app/models/destination';
 
 @Component({
   selector: 'app-quotation-form',
@@ -25,12 +28,15 @@ export class QuotationFormPage implements OnInit {
   apiLoaded!: Observable<boolean>;
   journeyForm = new JouneyForm();
   selectedVehicle!: string;
+  destination = new Destination();
   firstVehicle: boolean = false;
   secondVehicle: boolean = false;
 
   constructor(public dataShareService: DataShareService, public router: Router, httpClient: HttpClient
-            , public alertController: AlertController) {
-    this.apiLoaded = httpClient.jsonp('https://maps.googleapis.com/maps/api/js?key=AIzaSyB1ZVPSd5Nux1uSrVM59Srk7G9-uXxSfuM&amp', 'callback')
+            , public alertController: AlertController
+            , private destinationService: DestinationServiceService) {
+
+    this.apiLoaded = httpClient.jsonp(GoogleMapConfig.API_KEY, 'callback')
       .pipe(
         map(() => true),
         catchError(() => of(false)),
@@ -39,6 +45,15 @@ export class QuotationFormPage implements OnInit {
 
   ngOnInit() {
     this.getJourneyFormFeildsValues();
+    this.getDestinationNameForId(this.journeyForm.to);
+  }
+
+  getDestinationNameForId(destinationId: string) {
+    this.destinationService.getDestinationById(destinationId).subscribe((resp) => {
+      const dataList = JSON.parse(JSON.stringify(resp));
+
+      this.destination.place_name = dataList.data[0].place_name;
+    })
   }
 
   getJourneyFormFeildsValues() {

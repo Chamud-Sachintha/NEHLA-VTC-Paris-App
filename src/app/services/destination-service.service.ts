@@ -15,4 +15,9 @@ export class DestinationServiceService {
     const path = environment.app_uri + "allDestinations";
     return this.http.get<any[]>(path);
   }
+
+  getDestinationById(destinationId: string): Observable<any> {
+    const path = environment.app_uri + "destinationById" + "?destinationId=" + destinationId;
+    return this.http.get<any>(path);
+  }
 }

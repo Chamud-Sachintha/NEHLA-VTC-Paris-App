@@ -1,20 +1,27 @@
 <div class="container">
   <form [formGroup]="this.journeyForm" action="" class="form-group" (ngSubmit)="onSubmitFirstForm()">
-    <div class="row mt-3">
-      <div class="col-12">
+    <div class="row mt-3" id="fromSectionParent">
+      <div class="col-12" id="fromSection">
         <!-- <label for="from">From</label> -->
-        <input type="text" class="form-control text-input" placeholder="Type From Location" formControlName="from">
+        <input ngx-google-places-autocomplete type="text" class="form-control text-input"
+          placeholder="Type From Location" formControlName="from" (onAddressChange)="handleAddressChange($event)">
       </div>
     </div>
     <div class="row mt-3 text-center">
       <div class="col-12">
-        <button class="btn btn-primary btn-sm">Change</button>
+        <button class="btn btn-primary btn-sm" (click)="onClickChangeBtn()">Change</button>
       </div>
     </div>
-    <div class="row mt-3">
-      <div class="col-12">
+    <div class="row mt-3" id="toSectionParent">
+      <div class="col-12" id="toSection">
         <!-- <label for="from">To</label> -->
-        <input type="text" class="form-control text-input" placeholder="Type To Locatio" formControlName="to">
+        <!-- <input type="text" class="form-control text-input" placeholder="Type To Locatio"
+          formControlName="to"> -->
+        <label for="">Choose Destination</label>
+        <select class="form-select" aria-label="Default select example" formControlName="to">
+          <option selected>Open this select menu</option>
+          <option *ngFor="let eachDestination of this.destinationList" value="{{ eachDestination.id }}">{{ eachDestination.place_name }}</option>
+        </select>
       </div>
     </div>
     <div class="row mt-2 mb-2">
