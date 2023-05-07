@@ -11,9 +11,9 @@ export class AuthService {
 
   constructor(private http: HttpClient) { }
 
-  validateCustomerLogin() {
-    const path = environment.app_uri + "allClients";
-    return this.http.get<any[]>(path);
+  validateCustomerLogin(loginDetails: any): Observable<any> {
+    const path = environment.app_uri + "clientValidate";
+    return this.http.post<any[]>(path, loginDetails);
   }
 
   registerNewClient(clientDetails: Client): Observable<any> {
