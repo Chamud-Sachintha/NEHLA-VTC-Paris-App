@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 import { SwiperComponent, SwiperModule } from 'swiper/angular';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -25,7 +26,7 @@ export class HomePage implements OnInit {
     loop: true,
   }
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
     this.startAnimation();
@@ -43,6 +44,14 @@ export class HomePage implements OnInit {
       this.animationInProgress = false;
       this.startAnimation();
     }, 5000);
+  }
+
+  onClickSignInBtn() {
+    this.router.navigate(['/auth/login']);
+  }
+
+  onClickSignUpBtn() {
+    this.router.navigate(['/auth/register']);
   }
 
 }

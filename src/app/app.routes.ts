@@ -23,5 +23,9 @@ export const routes: Routes = [
         loadChildren: () => import("./modules/auth-module/auth-module.module").then(m => m.AuthModuleModule)
       }
     ]
+  },
+  {
+    path: 'register',
+    loadComponent: () => import('./modules/auth-module/register/register.page').then( m => m.RegisterPage)
   }
 ];
