@@ -56,12 +56,21 @@ export class LoginPage implements OnInit {
         this.openSyncLoading(false);
         this.openThePopupModelForValidation('Client Authentication', null, 'Cleint Authentication Successfully.');
 
+        this.saveClientDetailsInLocalStorage(this.clientAuthDetails);
+
         this.router.navigate(['/booking']);
       } else {
         this.openSyncLoading(false);
         this.openThePopupModelForValidation('Client Authentication', null, dataList.data.msg);
       }
     });
+  }
+
+  saveClientDetailsInLocalStorage(clientAuthDetails: Authenticate) {
+    localStorage.setItem("firstName", clientAuthDetails.data.first_name);
+    localStorage.setItem("lastName", clientAuthDetails.data.last_name);
+    localStorage.setItem("emailAddress", clientAuthDetails.data.email);
+    localStorage.setItem("mobileNumber", clientAuthDetails.data.mobile_number);
   }
 
   async openSyncLoading(status: boolean) {
