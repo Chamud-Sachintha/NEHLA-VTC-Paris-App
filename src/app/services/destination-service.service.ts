@@ -20,4 +20,12 @@ export class DestinationServiceService {
     const path = environment.app_uri + "destinationById" + "?destinationId=" + destinationId;
     return this.http.get<any>(path);
   }
+
+  getPriceByDestinationId(destinationId: string, passengerCountIdx: number): Observable<any> {
+    const path = environment.app_uri + "getDestinationPriceByPassengers?" 
+                  + "destinationId=" + destinationId
+                  + "&passengerCountIdx=" + passengerCountIdx;
+
+    return this.http.get<any>(path);
+  }
 }

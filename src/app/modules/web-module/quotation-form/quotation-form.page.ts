@@ -31,6 +31,7 @@ export class QuotationFormPage implements OnInit {
   destination = new Destination();
   firstVehicle: boolean = false;
   secondVehicle: boolean = false;
+  price!: number;
 
   constructor(public dataShareService: DataShareService, public router: Router, httpClient: HttpClient
             , public alertController: AlertController
@@ -46,6 +47,15 @@ export class QuotationFormPage implements OnInit {
   ngOnInit() {
     this.getJourneyFormFeildsValues();
     this.getDestinationNameForId(this.journeyForm.to);
+    this.getPriceByDestinationId(this.journeyForm.to, this.journeyForm.passengerCount);
+  }
+
+  getPriceByDestinationId(destinationId: string, passengerCountIdx: number) {
+    this.destinationService.getPriceByDestinationId(destinationId, passengerCountIdx).subscribe((data) => {
+      const dataList = JSON.parse(JSON.stringify(data));
+
+      this.price = dataList.data[0].price;
+    });
   }
 
   getDestinationNameForId(destinationId: string) {
@@ -61,7 +71,7 @@ export class QuotationFormPage implements OnInit {
       this.journeyForm.from = data[0].from;
       this.journeyForm.to = data[0].to;
       this.journeyForm.tripType = data[0].tripType;
-      this.journeyForm.passengerCount = data[0].tripType;
+      this.journeyForm.passengerCount = data[0].passengerCount;
       this.journeyForm.luggageCount = data[0].luggageCount;
       this.journeyForm.date = data[0].date;
       this.journeyForm.flightNumber = data[0].fliaghtNumber;
