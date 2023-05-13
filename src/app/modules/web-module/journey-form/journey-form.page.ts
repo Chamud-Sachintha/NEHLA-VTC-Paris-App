@@ -48,7 +48,7 @@ export class JourneyFormPage implements OnInit {
     
     if (this.validateProcessForFeilds() != false) {
       this.journeyFormValues.push(this.journeyForm.value);
-      this.dataSharedService.setJouneyDataValues(this.journeyFormValues);
+      this.dataSharedService.setPageValueArray(this.journeyFormValues);
 
       this.route.navigate(['/booking/quotation-form']);
     }

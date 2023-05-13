@@ -31,6 +31,7 @@ export class QuotationFormPage implements OnInit {
   destination = new Destination();
   firstVehicle: boolean = false;
   secondVehicle: boolean = false;
+  quotationPageValus: any[] = [];
   price!: number;
 
   constructor(public dataShareService: DataShareService, public router: Router, httpClient: HttpClient
@@ -67,7 +68,7 @@ export class QuotationFormPage implements OnInit {
   }
 
   getJourneyFormFeildsValues() {
-    this.dataShareService.getJouneyDataValues().subscribe((data) => {
+    this.dataShareService.getPageValueArray().subscribe((data) => {
       this.journeyForm.from = data[0].from;
       this.journeyForm.to = data[0].to;
       this.journeyForm.tripType = data[0].tripType;
@@ -84,6 +85,15 @@ export class QuotationFormPage implements OnInit {
     if (this.selectedVehicle == null) {
       this.openThePopupModelForValidation('Vehicle is Required', null, 'Please Select a Vehicle.');
     } else {
+      const quotationPageValues = {
+        destination: this.journeyForm.to,
+        passengerCountIdx: this.journeyForm.passengerCount,
+        selectedVehicleName: this.selectedVehicle,
+        price: this.price
+      }
+      this.quotationPageValus.push(quotationPageValues);
+      this.dataShareService.setPageValueArray(this.quotationPageValus);
+      
       this.router.navigate(['/booking/personal-form']);
     }
   }

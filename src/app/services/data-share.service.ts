@@ -10,11 +10,11 @@ export class DataShareService {
 
   constructor() { }
 
-  setJouneyDataValues(data: any) {
+  setPageValueArray(data: any) {
     this.journeyFormValueData.next(data);
   }
 
-  getJouneyDataValues() {
+  getPageValueArray() {
     return this.journeyFormValueData.asObservable();
   }
 }
