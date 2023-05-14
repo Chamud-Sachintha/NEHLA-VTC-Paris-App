@@ -1,3 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&family=Urbanist:wght@700&display=swap');
+
+.rec {
+    width: 100vw;
+    height: 134px;
+    left: 0px;
+    top: 0px;
+
+    background: #2E2A72;
+    border-radius: 0px 0px 30px 30px;
+}
+
+.welcome-heading {
+    width: 354px;
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    // font-weight: 700;
+    // font-size: 30px;
+    line-height: 130%;
+    color: white;
+    /* or 39px */
+    letter-spacing: 1px;
+    height: 102px;
+    left: 30px;
+    top: 121px;
+}
+
+.heading {
+    font-family: 'Urbanist', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 130%;
+    color: #1E232C;
+}
+
+.subtitle-heading {
+    font-family: 'Urbanist', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 130%;
+    /* or 39px */
+    letter-spacing: -0.01em;
+    color: #FEC242;
+    left: 35px;
+    top: 191px;
+}
+
 .has-search .form-control {
     padding-left: 2.375rem;
 }
