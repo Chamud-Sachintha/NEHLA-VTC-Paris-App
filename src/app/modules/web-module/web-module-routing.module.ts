@@ -11,6 +11,7 @@ import { JourneyFormPage } from './journey-form/journey-form.page';
 import { QuotationFormPage } from './quotation-form/quotation-form.page';
 import { PersonalFormPage } from './personal-form/personal-form.page';
 import { PaymentFormPage } from './payment-form/payment-form.page';
+import { AuthGuardGuard } from 'src/app/guards/auth-guard.guard';
 
 const routes: Routes = [
   {
@@ -47,6 +48,7 @@ const routes: Routes = [
   {
     path: 'booking',
     component: BookingPage,
+    canActivate: [AuthGuardGuard],
     children: [
       {
         path: '',

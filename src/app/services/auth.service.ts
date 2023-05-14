@@ -20,4 +20,8 @@ export class AuthService {
     const path = environment.app_uri + "client";
     return this.http.post<any>(path, clientDetails);
   }
+
+  isClientLoggedIn() {
+    return localStorage.getItem("emailAddress") != null;
+  }
 }
