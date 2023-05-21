@@ -86,10 +86,14 @@ export class QuotationFormPage implements OnInit {
       this.openThePopupModelForValidation('Vehicle is Required', null, 'Please Select a Vehicle.');
     } else {
       const quotationPageValues = {
-        destination: this.journeyForm.to,
+        from: this.journeyForm.from,
+        destination: this.destination.place_name,
         passengerCountIdx: this.journeyForm.passengerCount,
         selectedVehicleName: this.selectedVehicle,
-        price: this.price
+        price: this.price,
+        luggageCount: this.journeyForm.luggageCount,
+        tripType: this.journeyForm.tripType,
+        babySeatCount: this.journeyForm.babySeatCount
       }
       this.quotationPageValus.push(quotationPageValues);
       this.dataShareService.setPageValueArray(this.quotationPageValus);

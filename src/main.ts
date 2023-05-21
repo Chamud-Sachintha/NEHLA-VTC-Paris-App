@@ -11,6 +11,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { GoogleMapsModule } from '@angular/google-maps';
 import { GooglePlaceModule } from 'ngx-google-places-autocomplete';
+import { defineCustomElements } from '@stripe-elements/stripe-elements/loader';
 
 if (environment.production) {
   enableProdMode();
@@ -24,4 +25,5 @@ bootstrapApplication(AppComponent, {
                         , GooglePlaceModule),
     provideRouter(routes),
   ],
-});
+})
+.then(() => defineCustomElements(window));

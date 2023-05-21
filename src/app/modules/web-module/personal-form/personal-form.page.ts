@@ -16,10 +16,16 @@ import { DestinationServiceService } from 'src/app/services/destination-service.
 })
 export class PersonalFormPage implements OnInit {
 
+  from!: string;
   selectedVehicleName!: string;
   destinationId!: string;
   passengerCountIdx!: number;
   price!: number;
+  luggageCount!: number;
+  babySeatCount!: number;
+  tripType!: string;
+  destination!: string;
+  personalFormDataValues: any = [];
   clientDetails = new Client();
 
   constructor(private dataShareService: DataShareService, private router: Router, private destinationService: DestinationServiceService) { }
@@ -31,10 +37,15 @@ export class PersonalFormPage implements OnInit {
 
   getQuotationFormValues() {
     this.dataShareService.getPageValueArray().subscribe((data) => {
+      this.from = data[0].from;
       this.selectedVehicleName = data[0].selectedVehicleName;
       this.destinationId = data[0].destinationId;
       this.passengerCountIdx = data[0].passengerCountIdx;
       this.price = data[0].price;
+      this.tripType = data[0].tripType;
+      this.luggageCount = data[0].luggageCount;
+      this.babySeatCount = data[0].babySeatCount;
+      this.destination = data[0].destination;
     });
   }
 
@@ -51,6 +62,20 @@ export class PersonalFormPage implements OnInit {
   }
 
   goToPaymentForm() {
+    const data = {
+      from: this.from,
+      to: this.destination,
+      vehicleName: this.selectedVehicleName,
+      price: this.price,
+      tripType: this.tripType,
+      passengerCount: this.passengerCountIdx,
+      babySeatCount: 0,
+      luggageCount: this.luggageCount
+    }
+
+    this.personalFormDataValues.push(data);
+    this.dataShareService.setPageValueArray(this.personalFormDataValues);
+
     this.router.navigate(['/booking/payment-form']);
   }
 

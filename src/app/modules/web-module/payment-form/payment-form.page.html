@@ -9,7 +9,7 @@
           <p>From :</p>
         </div>
         <div class="col-6">
-          Kiribathgoda
+          {{ this.journeyDetails.from }}
         </div>
       </div>
       <div class="row">
@@ -17,7 +17,7 @@
           <p>To :</p>
         </div>
         <div class="col-6">
-          Kadawatha
+          {{ this.journeyDetails.to }}
         </div>
       </div>
     </div>
@@ -32,7 +32,7 @@
           <p>Vehicle Name :</p>
         </div>
         <div class="col-6">
-          <p>Mercedez Bence Class S Series</p>
+          <p>{{ this.selectedVehicleName }}</p>
         </div>
       </div>
       <div class="row">
@@ -40,7 +40,7 @@
           <p>Price :</p>
         </div>
         <div class="col-6">
-          <p>30 (EUR)</p>
+          <p>{{ this.price }} (EUR)</p>
         </div>
       </div>
     </div>
@@ -55,7 +55,7 @@
           <p>Return Trip :</p>
         </div>
         <div class="col-6">
-          <p>Yes</p>
+          <p>{{ this.journeyDetails.tripType == 'one_way' ? "One Way" : "Return" }}</p>
         </div>
       </div>
       <div class="row">
@@ -63,7 +63,7 @@
           <p>Passenger Count :</p>
         </div>
         <div class="col-6">
-          <p>5</p>
+          <p>{{ this.journeyDetails.passengerCount }}</p>
         </div>
       </div>
       <div class="row">
@@ -71,7 +71,7 @@
           <p>Luggage Count :</p>
         </div>
         <div class="col-6">
-          <p>3</p>
+          <p>{{ this.journeyDetails.luggageCount }}</p>
         </div>
       </div>
       <div class="row">
@@ -79,7 +79,7 @@
           <p>Baby seat Count :</p>
         </div>
         <div class="col-6">
-          <p>3</p>
+          <p>{{ this.journeyDetails.babySeatCount }}</p>
         </div>
       </div>
     </div>
@@ -130,7 +130,7 @@
   </div>
   <div class="row mt-3">
     <div class="col-12">
-      <button class="submit-btn">Confirm Order & Go to Payment</button>
+      <button class="submit-btn" (click)="paymentSheetStripe()">Confirm Order & Go to Checkout {{ this.price }} (EUR)</button>
     </div>
   </div>
 </div>
