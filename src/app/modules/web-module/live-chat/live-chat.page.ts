@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 import { ChatServiceService } from 'src/app/services/chat-service.service';
+import { DatePipe } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-live-chat',
@@ -13,7 +15,12 @@ import { ChatServiceService } from 'src/app/services/chat-service.service';
 })
 export class LiveChatPage implements OnInit {
 
-  constructor(private chatService: ChatServiceService) { }
+  currentDateTime!: any;
+  agentList: any[] = [];
+
+  constructor(private chatService: ChatServiceService, public datepipe: DatePipe, private router: Router) {
+    this.currentDateTime =this.datepipe.transform((new Date), 'MM/dd/yyyy h:mm:ss');
+  }
 
   ngOnInit() {
     console.log("dshfgjsdfjsddf");
@@ -22,8 +29,17 @@ export class LiveChatPage implements OnInit {
 
   getConnectedAgentList() {
     this.chatService.getAllConnectedAgentList().subscribe((data) => {
-      console.log(data);
+      const dataList = JSON.parse(JSON.stringify(data));
+
+      dataList.data[0].forEach((element: any) => {
+        this.agentList.push(element)
+      })
     })
+  }
+
+  setAgentData(userName: any) {
+    sessionStorage.setItem("recName", userName);
+    this.router.navigate(['/chat-room']);
   }
 
 }

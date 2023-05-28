@@ -13,6 +13,7 @@ import { PersonalFormPage } from './personal-form/personal-form.page';
 import { PaymentFormPage } from './payment-form/payment-form.page';
 import { AuthGuardGuard } from 'src/app/guards/auth-guard.guard';
 import { LiveChatPage } from './live-chat/live-chat.page';
+import { ChatRoomPage } from './chat-room/chat-room.page';
 
 const routes: Routes = [
   {
@@ -75,6 +76,11 @@ const routes: Routes = [
   {
     path: 'live-chat',
     component: LiveChatPage,
+    pathMatch: 'full'
+  },
+  {
+    path: 'chat-room',
+    component: ChatRoomPage,
     pathMatch: 'full'
   }
 ];
