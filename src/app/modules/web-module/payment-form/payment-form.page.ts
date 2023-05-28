@@ -25,6 +25,10 @@ export class PaymentFormPage implements OnInit {
   selectedVehicleName!: string;
   price!: number;
   paymentFormPageValues: any[] = [];
+  paymentIntent!: any;
+  ephemeralKey!: any;
+  customer!: any;
+  paymentInfo: any[] = [];
 
   constructor(private dataShareService: DataShareService, private stripeService: StripeServiceService, private router: Router) {
     Stripe.initialize({
@@ -64,19 +68,43 @@ export class PaymentFormPage implements OnInit {
         console.log('PaymentSheetEventsEnum.Completed');
       });
 
+      Stripe.addListener(PaymentSheetEventsEnum.Failed, (e: any) => {
+        console.log('fail' + e.getMessage());
+      });
+
       const data = new HttpParams({
         fromObject: this.data
       })
 
-      const data$ = this.stripeService.getUniqueIDsFromStripe(data);
+      const data$:any = [];
+      this.stripeService.getUniqueIDsFromStripe(data).subscribe((data) => {
+        const dataList = JSON.parse(JSON.stringify(data));
+        
+        localStorage.setItem("paymentIntent", dataList.data[0].paymentIntent);
+        localStorage.setItem("ephemeralKey", dataList.data[0].ephemeralKeys);
+        localStorage.setItem("customer", dataList.data[0].customer);
 
-      const { paymentIntent, ephemeralKey, customer } = await lastValueFrom(data$);
+        this.getPaymentIntentDetails();
+      });
+    } catch (err) {
+      console.log(err);
+    }
+    
+  }
+
+  async getPaymentIntentDetails() {
+      this.paymentIntent = localStorage.getItem("paymentIntent");
+      this.ephemeralKey = localStorage.getItem("ephemeralKey");
+      this.customer = localStorage.getItem("customer");
+      
+      // const { paymentIntent, ephemeralKey, customer } = await lastValueFrom(data$);
 
       // prepare PaymentSheet with CreatePaymentSheetOption.
       await Stripe.createPaymentSheet({
-        paymentIntentClientSecret: paymentIntent,
-        customerId: customer,
-        customerEphemeralKeySecret: ephemeralKey,
+        paymentIntentClientSecret: this.paymentIntent,
+        customerId: this.customer,
+        customerEphemeralKeySecret: this.ephemeralKey,
+        merchantDisplayName: 'Chamud Sachintha'
       });
 
       // present PaymentSheet and get result.
@@ -84,10 +112,6 @@ export class PaymentFormPage implements OnInit {
       if (result.paymentResult === PaymentSheetEventsEnum.Completed) {
         // Happy path
       }
-    } catch (err) {
-
-    }
-    
   }
 
 }

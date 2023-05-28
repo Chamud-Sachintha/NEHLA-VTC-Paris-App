@@ -23,5 +23,5 @@ export const routes: Routes = [
         loadChildren: () => import("./modules/auth-module/auth-module.module").then(m => m.AuthModuleModule)
       }
     ]
-  }
+  },
 ];

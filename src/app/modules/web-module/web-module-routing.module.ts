@@ -12,6 +12,7 @@ import { QuotationFormPage } from './quotation-form/quotation-form.page';
 import { PersonalFormPage } from './personal-form/personal-form.page';
 import { PaymentFormPage } from './payment-form/payment-form.page';
 import { AuthGuardGuard } from 'src/app/guards/auth-guard.guard';
+import { LiveChatPage } from './live-chat/live-chat.page';
 
 const routes: Routes = [
   {
@@ -70,6 +71,11 @@ const routes: Routes = [
         pathMatch: 'full'
       }
     ]
+  },
+  {
+    path: 'live-chat',
+    component: LiveChatPage,
+    pathMatch: 'full'
   }
 ];
 
