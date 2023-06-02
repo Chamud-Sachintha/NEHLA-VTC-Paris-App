@@ -23,7 +23,6 @@ export class LiveChatPage implements OnInit {
   }
 
   ngOnInit() {
-    console.log("dshfgjsdfjsddf");
     this.getConnectedAgentList();
   }
 
