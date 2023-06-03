@@ -76,11 +76,13 @@ const routes: Routes = [
   {
     path: 'live-chat',
     component: LiveChatPage,
+    canActivate: [AuthGuardGuard],
     pathMatch: 'full'
   },
   {
     path: 'chat-room',
     component: ChatRoomPage,
+    canActivate: [AuthGuardGuard],
     pathMatch: 'full'
   }
 ];
