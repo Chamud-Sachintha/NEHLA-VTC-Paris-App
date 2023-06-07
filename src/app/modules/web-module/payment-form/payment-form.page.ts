@@ -111,6 +111,7 @@ export class PaymentFormPage implements OnInit {
       const result = await Stripe.presentPaymentSheet();
       if (result.paymentResult === PaymentSheetEventsEnum.Completed) {
         // Happy path
+        console.log("payment is ok")
       }
   }
 
