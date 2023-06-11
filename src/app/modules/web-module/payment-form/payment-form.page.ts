@@ -68,10 +68,6 @@ export class PaymentFormPage implements OnInit {
         console.log('PaymentSheetEventsEnum.Completed');
       });
 
-      Stripe.addListener(PaymentSheetEventsEnum.Failed, (e: any) => {
-        console.log('fail' + e.getMessage());
-      });
-
       const data = new HttpParams({
         fromObject: this.data
       })
@@ -111,7 +107,7 @@ export class PaymentFormPage implements OnInit {
       const result = await Stripe.presentPaymentSheet();
       if (result.paymentResult === PaymentSheetEventsEnum.Completed) {
         // Happy path
-        console.log("payment is ok")
+        console.log(result)
       }
   }
 

@@ -14,6 +14,8 @@ import { PaymentFormPage } from './payment-form/payment-form.page';
 import { AuthGuardGuard } from 'src/app/guards/auth-guard.guard';
 import { LiveChatPage } from './live-chat/live-chat.page';
 import { ChatRoomPage } from './chat-room/chat-room.page';
+import { TestimonialsPage } from './testimonials/testimonials.page';
+import { PrivacyPagePage } from './privacy-page/privacy-page.page';
 
 const routes: Routes = [
   {
@@ -83,6 +85,16 @@ const routes: Routes = [
     path: 'chat-room',
     component: ChatRoomPage,
     canActivate: [AuthGuardGuard],
+    pathMatch: 'full'
+  },
+  {
+    path: 'testimonials',
+    component: TestimonialsPage,
+    pathMatch: 'full'
+  },
+  {
+    path: 'privacy',
+    component: PrivacyPagePage,
     pathMatch: 'full'
   }
 ];
