@@ -14,4 +14,9 @@ export class StripeServiceService {
     const path = environment.app_uri + "payment-sheet";
     return this.http.post<any>(path, paymentBody).pipe(first());
   }
+
+  addSuccessPaymentLog(sessionId: any) {
+    const path = environment.app_uri + "verify-payment";
+    return this.http.post<any>(path, sessionId);
+  }
 }

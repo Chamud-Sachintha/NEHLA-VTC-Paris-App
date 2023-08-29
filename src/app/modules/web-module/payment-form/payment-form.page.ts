@@ -107,7 +107,12 @@ export class PaymentFormPage implements OnInit {
       const result = await Stripe.presentPaymentSheet();
       if (result.paymentResult === PaymentSheetEventsEnum.Completed) {
         // Happy path
-        console.log(result)
+        const sessionObj = {
+          session_id: this.customer
+        }
+        this.stripeService.addSuccessPaymentLog(sessionObj).subscribe((data) => {
+          console.log(data)
+        })
       }
   }
 
